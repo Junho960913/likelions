@@ -78,10 +78,14 @@
             cursor: pointer;
         }
 
+        .slider {
+            margin: 0 auto;
+        }
+
         .slick-dots{
             position: absolute;
-            bottom: -25px;
-
+            bottom: 10px;
+            
             display: block;
 
             width: 100%;
@@ -89,22 +93,22 @@
             margin: 0;
 
             list-style: none;
-
-            text-align: center;
+            text-align: right;
         }
 
-        .slick-arrow{
-            z-index: 2; /* prev버튼은 위치 이동시 이미지 뒤로 숨겨짐 */
-            position:absolute;  /* 원하는 위치에 지정  */
+        /* .slick-arrow{
+            z-index: 2; 
+            position:absolute;
             top: 50%; 
             width: 1000px; 
             height: 1000px; 
             transform: translateY(-25px);
-        }
+        } */
 
-        /* .slick-prev,
+        .slick-prev,
         .slick-next
-        {
+        {   
+            z-index: 10;
             font-size: 0;
             line-height: 0;
 
@@ -115,17 +119,44 @@
 
             width: 100px;
             height: 100px;
+            margin: 0;
             padding: 0;
-            -webkit-transform: translate(0, -50%);
-            -ms-transform: translate(0, -50%);
-            transform: translate(0, -50%);
-
             cursor: pointer;
-
             color: transparent;
             border: none;
             outline: none;
             background: transparent;
+        }
+
+        .slick-prev {
+            margin-left: 20px;
+        }
+
+        /* .slick-next {
+            margin-right: 40px;
+        } */
+        
+        .slick-prev:before,
+        .slick-next:before
+        {
+            font-family: 'slick';
+            font-size: 100px;
+            line-height: 1;
+
+            opacity: .75;
+            color: white;
+        }
+
+        .slick-prev:before {
+            margin-left: 20px;
+        }
+
+        .slick-next:before {
+            margin-right: 40px;
+        }
+
+        /* .bottom{
+
         } */
     </style>
 </head>
