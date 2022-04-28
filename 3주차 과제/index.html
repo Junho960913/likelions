@@ -59,7 +59,7 @@
             height: 50px;
         }
         
-        li {
+        .menu {
             float: left;
             margin-top: 0px;
             margin-left: 52px;
@@ -78,7 +78,8 @@
             cursor: pointer;
         }
 
-        .slider {
+        #slider-div {
+            width: 100%;
             margin: 0 auto;
         }
 
@@ -93,7 +94,7 @@
             margin: 0;
 
             list-style: none;
-            text-align: right;
+            text-align: center;
         }
 
         /* .slick-arrow{
@@ -132,9 +133,9 @@
             margin-left: 20px;
         }
 
-        /* .slick-next {
+        .slick-next {
             margin-right: 40px;
-        } */
+        }
         
         .slick-prev:before,
         .slick-next:before
@@ -155,9 +156,24 @@
             margin-right: 40px;
         }
 
-        /* .bottom{
+        .notice {
+            padding-left: 10px;
+        }
 
-        } */
+        .search-container {
+            height: 119.99px;
+            margin-top: -56px;
+        }
+
+        .search {
+            background-color:#f2cb49;
+            width: 1140px;
+            height: 119.99px;
+            margin-left: auto;
+            margin-right:auto;
+            border: 0px;
+            border-radius: 6px;
+        }
     </style>
 </head>
 
@@ -178,12 +194,12 @@
                 <img src="logo.png" height="45px" style="margin:auto 0 auto 0; cursor: pointer;">
                 <div class="menus">
                     <ul style="list-style:none; margin-top: 5px">
-                        <li>전문과정</li>
-                        <li>공개과정</li>
-                        <li>국제과정</li>
-                        <li>학위과정</li>
-                        <li>이용안내</li>
-                        <li><img src="search.png" width="23px"></li>
+                        <li class="menu">전문과정</li>
+                        <li class="menu">공개과정</li>
+                        <li class="menu">국제과정</li>
+                        <li class="menu">학위과정</li>
+                        <li class="menu">이용안내</li>
+                        <li class="menu"><img src="search.png" width="23px"></li>
                     </ul>
                 </div>
 
@@ -195,14 +211,58 @@
         </div>
     </div>
 
-    <div>
+    <div style="margin-bottom:-6px">
         <div id="slider-div">
             <img src="https://www.learnus.org/pluginfile.php/1/local_ubion/mainslider/84/4%EC%9B%94%20%EC%82%AC%EC%9D%B4%ED%8A%B8_00_2560_Banner.png">
             <img src="https://www.learnus.org/pluginfile.php/1/local_ubion/mainslider/27/03_00_2560_banner.png">
             <img src="https://www.learnus.org/pluginfile.php/1/local_ubion/mainslider/29/02_00_2560_Banner.png">
         </div>
-   </div>
+    </div>
 
+    <div style="background-color: rgb(240,242, 249); padding-bottom: 90px; padding-top: 20px">
+        <div style="width: 900px; margin-left: auto; margin-right: auto;">
+            <div style="display:flex; justify-content:space-between">
+                <div style="width:400px;">
+                    <h2>공지사항</h2>
+                    <div>LearnUs 4월 이벤트 안내</div>
+                    <hr>
+                    <ul class="notice">
+                        <li style="margin-bottom:5px">타대학 학점교류생 이용안내<span style="float:right; color: gray">2022-02-24</span></li>
+                        <li style="margin-bottom:5px">Solutions for login errors<span style="float:right; color: gray">2022-02-10</span></li>
+                        <li style="margin-bottom:5px">재학생 로그인 오류 시 해결 방법<span style="float:right; color: gray">2022-02-10</span></li>
+                        <li style="margin-bottom:5px">LearnUs 교육과정 안내<span style="float:right; color: gray">2022-01-24</span></li>
+                        <li style="margin-bottom:5px">LearnUs 회원가입 절차 안내<span style="float:right; color: gray">2022-01-24</span></li>
+                        <li style="margin-bottom:5px">LearnUs 연세대학교 동문 인증방법 안내<span style="float:right; color: gray">2021-12-27</span></li>
+                    </ul>
+                </div>
+        
+                <div style="width:400px;">
+                    <h2>홍보영상</h2>
+                    <div>
+                        <video muted="" autoplay="" loop="" playsinline="" style="width:536px; border-radius: 6px;">
+                            <!-- <source src="/theme/coursemosv2/pix/login/main_vod.mp4" type="video/mp4"> -->
+                            <source src="https://etsznusfdush5752374.cdn.ntruss.com/8610ce6c-1acc-4de1-8561-7519b6e6cd58/mp4/8610ce6c-1acc-4de1-8561-7519b6e6cd58.mp4" type="video/mp4">
+                        </video>
+                        <!-- <div class="main-vod-controller">
+                            <button class="btn-vod" type="button">영상 재생/정지 버튼</button>
+                            <button class="btn-vod-audio" type="button">영상 소리/정지 버튼</button>
+                        </div> -->
+                    </div>
+                </div>
+            </div> 
+        </div>
+    </div>
+
+
+    <div class="search-container">
+        <div class="search">
+            asdfghjk
+        </div>
+    </div>
+
+    <div>
+        <h2>인기강좌</h2>
+    </div>
 
 </body>
 
@@ -218,7 +278,7 @@
           arrows : true,         // 옆으로 이동하는 화살표 표시 여부
           dots : true,         // 스크롤바 아래 점으로 페이지네이션 여부
           autoplay : true,            // 자동 스크롤 사용 여부
-          autoplaySpeed : 10000,         // 자동 스크롤 시 다음으로 넘어가는데 걸리는 시간 (ms)
+          autoplaySpeed : 3000,         // 자동 스크롤 시 다음으로 넘어가는데 걸리는 시간 (ms)
           pauseOnHover : true,        // 슬라이드 이동    시 마우스 호버하면 슬라이더 멈추게 설정
           vertical : false,        // 세로 방향 슬라이드 옵션
           prevArrow : "<button type='button' class='slick-prev'>Previous</button>",        // 이전 화살표 모양 설정
