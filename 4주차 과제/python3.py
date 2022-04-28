@@ -1,8 +1,7 @@
 words = []
 
 while True:
-    print('Enter anything: ', end='')
-    a = input()
+    a = input('Enter anything: ')
     if a == 'q':
         break
     words.append(a)

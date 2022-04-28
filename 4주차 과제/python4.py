@@ -1,12 +1,10 @@
 magic_dic = {}
 
 while True:
-    print('Enter a fruit type (q to quit): ', end='')
-    type_ = input()
+    type_ = input('Enter a fruit type (q to quit): ')
     if type_ == 'q':
         break
-    print('Enter the weight in kg: ', end='')
-    weight = input()
+    weight = input('Enter the weight in kg: ')
     magic_dic[type_] = weight
 
 print(magic_dic)

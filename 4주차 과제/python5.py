@@ -8,8 +8,7 @@ print()
 menus = []
 count = 0
 while count < 5:
-    print('메뉴 추가: ', end='')
-    menu = input()
+    menu = input('메뉴 추가: ')
     if menu in menus:
         del menus[menus.index(menu)]
         menus.append(menu)
@@ -17,8 +16,7 @@ while count < 5:
     else:
         menus.append(menu)
         count += 1
-    print(f'현재 메뉴 수 = {count}')
-    print()
+    print(f'현재 메뉴 수 = {count}', end='\n\n')
 
 for i in range(3,0,-1):
     print(i)
@@ -26,8 +24,7 @@ for i in range(3,0,-1):
 
 print()
 print(menus)
-print('과연 오늘의 메뉴는?')
-print()
+print('과연 오늘의 메뉴는?', end='\n\n')
 
 for i in range(3,0,-1):
     print(i)
